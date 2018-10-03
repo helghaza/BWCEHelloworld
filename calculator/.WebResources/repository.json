@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/calculator.calculator-Resource.json",
+        "type": "generated"
+    }]
+}

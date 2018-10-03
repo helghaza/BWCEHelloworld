@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_4JZEsMMEEeiw6pirQH8LbQ" targetNamespace="http://tns.tibco.com/bw/composite/calculator" name="calculator" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="__fw1UMMEEeiw6pirQH8LbQ" name="multiply" promote="Componentcalculator/multiply">
+    <sca:interface.wsdl xmi:id="__gB7EMMEEeiw6pirQH8LbQ" interface="http://xmlns.example.com/20180928115716PLT#wsdl.interface(multiply)" scaext:wsdlLocation="../Processes/calculator/calculator.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="__gLsEMMEEeiw6pirQH8LbQ" name="RestService" path="/multiply" docBasePath="http://localhost:7777/calculator" docResourcePath="Resource" basePath="/" connector="calculator.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/calculator.calculator-Resource.json">
+      <operation xmi:id="__gNhQMMEEeiw6pirQH8LbQ" operationName="get" nickname="get-multiply" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_R_kYgMMFEeiw6pirQH8LbQ">
+          <parameterMapping xmi:id="_R_k_kMMFEeiw6pirQH8LbQ" parameterName="number" parameterType="Query" dataType="integer#int32"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="__g42sMMEEeiw6pirQH8LbQ"/>
+      <advancedConfig xmi:id="__gLsEcMEEeiw6pirQH8LbQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="__gOIUMMEEeiw6pirQH8LbQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_4k-NcMMEEeiw6pirQH8LbQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_4lDtAMMEEeiw6pirQH8LbQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_4lFiMMMEEeiw6pirQH8LbQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_4lHXYMMEEeiw6pirQH8LbQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_4lJMkMMEEeiw6pirQH8LbQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_4lKasMMEEeiw6pirQH8LbQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_4lLo0MMEEeiw6pirQH8LbQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_4T_yMMMEEeiw6pirQH8LbQ" name="Componentcalculator" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_4T_yMcMEEeiw6pirQH8LbQ" processName="calculator.calculator"/>
+    <sca:service xmi:id="__fnrYMMEEeiw6pirQH8LbQ" name="multiply">
+      <sca:interface.wsdl xmi:id="__fqusMMEEeiw6pirQH8LbQ" interface="http://xmlns.example.com/20180928115716PLT#wsdl.interface(multiply)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
